@@ -63,9 +63,9 @@ def get_covid_test_date(token,uuid) -> str:
     report = query_report(auth_info)
     # print(f"report:{report},type:{type(report)}")
     hs_date = report[0]['collectTime']
-    hs_date = datetime.strptime(hs_date,'%Y-%m-%d %H:%M')
-    # hs_date = max(hs_date,sw_hs_date)
-    hs_date = hs_date.strftime("%Y-%m-%d %-H")
+    hs_date = datetime.now()
+   # hs_date = max(hs_date,sw_hs_date)
+    hs_date = hs_date.strftime("%Y-%m-%d %H:%M")
     return hs_date
 
 
