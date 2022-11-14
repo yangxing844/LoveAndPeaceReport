@@ -24,7 +24,7 @@ if __name__ == "__main__":
     curr_location = os.getenv('CURR_LOCATION')
     token = os.getenv("SKM_TOKEN")
     uuid = os.getenv("SKM_UUID")
-    print(password, current, token, uuid)
+    print(password, curr_location, token, uuid)
     hs_date = get_covid_test_date(token,uuid)
     if '2022' not in hs_date:
         raise Exception("invalid hs_date")
